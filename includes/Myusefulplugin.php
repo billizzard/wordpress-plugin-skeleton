@@ -73,10 +73,10 @@ class Myusefulplugin
      *
      * Include the following files that make up the plugin:
      *
-     * - Myusefulplugin_Loader. Orchestrates the hooks of the plugin.
-     * - Myusefulplugin_i18n. Defines internationalization functionality.
-     * - Myusefulplugin_Admin. Defines all hooks for the admin area.
-     * - Myusefulplugin_Public. Defines all hooks for the public side of the site.
+     * - MyusefulpluginLoader. Orchestrates the hooks of the plugin.
+     * - MyusefulpluginI18n. Defines internationalization functionality.
+     * - MyusefulpluginAdmin. Defines all hooks for the admin area.
+     * - MyusefulpluginPublic. Defines all hooks for the public side of the site.
      *
      * Create an instance of the loader which will be used to register the hooks
      * with WordPress.
@@ -101,13 +101,13 @@ class Myusefulplugin
         /**
          * The class responsible for defining all actions that occur in the admin area.
          */
-        //require_once plugin_dir_path(dirname(__FILE__)) . 'admin/MyusefulpluginAdmin.php';
+        require_once plugin_dir_path(dirname(__FILE__)) . 'admin/MyusefulpluginAdmin.php';
 
         /**
          * The class responsible for defining all actions that occur in the public-facing
          * side of the site.
          */
-        //require_once plugin_dir_path(dirname(__FILE__)) . 'public/MyusefulpluginPublic.php';
+        require_once plugin_dir_path(dirname(__FILE__)) . 'public/MyusefulpluginPublic.php';
 
         $this->loader = new MyusefulpluginLoader();
     }
@@ -115,7 +115,7 @@ class Myusefulplugin
     /**
      * Define the locale for this plugin for internationalization.
      *
-     * Uses the Myusefulplugin_i18n class in order to set the domain and to register the hook
+     * Uses the MyusefulpluginI18n class in order to set the domain and to register the hook
      * with WordPress.
      *
      * @since 1.0.0
@@ -136,10 +136,10 @@ class Myusefulplugin
      */
     private function defineAdminHooks()
     {
-//        $pluginAdmin = new MyusefulpluginAdmin($this->getPluginName(), $this->getVersion());
-//
-//        $this->loader->addAction('admin_enqueue_scripts', $pluginAdmin, 'enqueueStyles');
-//        $this->loader->addAction('admin_enqueue_scripts', $pluginAdmin, 'enqueueScripts');
+        $pluginAdmin = new MyusefulpluginAdmin($this->getPluginName(), $this->getVersion());
+
+        $this->loader->addAction('admin_enqueue_scripts', $pluginAdmin, 'enqueueStyles');
+        $this->loader->addAction('admin_enqueue_scripts', $pluginAdmin, 'enqueueScripts');
     }
 
     /**
@@ -151,10 +151,10 @@ class Myusefulplugin
      */
     private function definePublicHooks()
     {
-//        $pluginPublic = new MyusefulpluginPublic($this->getPluginName(), $this->getVersion());
-//
-//        $this->loader->addAction('wp_enqueue_scripts', $pluginPublic, 'enqueueStyles');
-//        $this->loader->addAction('wp_enqueue_scripts', $pluginPublic, 'enqueueScripts');
+        $pluginPublic = new MyusefulpluginPublic($this->getPluginName(), $this->getVersion());
+
+        $this->loader->addAction('wp_enqueue_scripts', $pluginPublic, 'enqueueStyles');
+        $this->loader->addAction('wp_enqueue_scripts', $pluginPublic, 'enqueueScripts');
     }
 
     /**
