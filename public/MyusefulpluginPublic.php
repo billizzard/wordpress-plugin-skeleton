@@ -63,17 +63,17 @@ class MyusefulpluginPublic
          * This function is provided for demonstration purposes only.
          *
          * An instance of this class should be passed to the run() function
-         * defined in Myusefulplugin_Loader as all of the hooks are defined
+         * defined in MyusefulpluginLoader as all of the hooks are defined
          * in that particular class.
          *
-         * The Myusefulplugin_Loader will then create the relationship
+         * The MyusefulpluginLoader will then create the relationship
          * between the defined hooks and the functions defined in this
          * class.
          */
 
         wp_enqueue_style(
             $this->pluginName,
-            plugin_dir_url(__FILE__) . 'css/myusefulplugin-public.css',
+            plugin_dir_url(__FILE__) . 'css/public.css',
             [],
             $this->version,
             'all'
@@ -91,17 +91,17 @@ class MyusefulpluginPublic
          * This function is provided for demonstration purposes only.
          *
          * An instance of this class should be passed to the run() function
-         * defined in Myusefulplugin_Loader as all of the hooks are defined
+         * defined in MyusefulpluginLoader as all of the hooks are defined
          * in that particular class.
          *
-         * The Myusefulplugin_Loader will then create the relationship
+         * The MyusefulpluginLoader will then create the relationship
          * between the defined hooks and the functions defined in this
          * class.
          */
 
         wp_enqueue_script(
             $this->pluginName,
-            plugin_dir_url(__FILE__) . 'js/myusefulplugin-public.js',
+            plugin_dir_url(__FILE__) . 'js/public.js',
             ['jquery'],
             $this->version,
             false

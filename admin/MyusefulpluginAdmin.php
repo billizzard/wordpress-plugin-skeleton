@@ -63,7 +63,7 @@ class MyusefulpluginAdmin
 
         wp_enqueue_style(
             $this->pluginName,
-            plugin_dir_url(__FILE__) . 'css/myusefulplugin-admin.css',
+            plugin_dir_url(__FILE__) . 'css/admin.css',
             [],
             $this->version,
             'all'
@@ -91,7 +91,7 @@ class MyusefulpluginAdmin
 
         wp_enqueue_script(
             $this->pluginName,
-            plugin_dir_url(__FILE__) . 'js/myusefulplugin-admin.js',
+            plugin_dir_url(__FILE__) . 'js/admin.js',
             ['jquery'],
             $this->version,
             false

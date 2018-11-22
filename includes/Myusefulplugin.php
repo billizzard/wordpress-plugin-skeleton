@@ -60,7 +60,7 @@ class Myusefulplugin
             $this->version = '1.0.0';
         }
 
-        $this->pluginName = 'myusefulplugin';
+        $this->pluginName = 'Myusefulplugin';
 
         $this->loadDependencies();
         $this->setLocale();

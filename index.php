@@ -20,7 +20,6 @@
  * Author URI:        AuthorUri
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       myusefulplugin
  * Domain Path:       /languages
  */
 
@@ -38,7 +37,6 @@ define('PLUGIN_NAME_VERSION', '1.0.0');
 
 /**
  * The code that runs during plugin activation.
- * This action is documented in includes/class-myusefulplugin-activator.php
  */
 function activateMyusefulplugin()
 {
@@ -48,7 +46,6 @@ function activateMyusefulplugin()
 
 /**
  * The code that runs during plugin deactivation.
- * This action is documented in includes/class-myusefulplugin-deactivator.php
  */
 function deactivateMyusefulplugin()
 {
